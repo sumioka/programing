@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <h1>ああああ</h1>
+    <a href="https://www.youtube.com/channel/UCEdGxU8i5mm9yTbN_d1e4uw">
+      <img
+        style="width: 100px;"
+        src="https://images-fe.ssl-images-amazon.com/images/I/71Klf-k87EL._AC_UL160_.jpg"
+      />
+    </a>
+    <div id="sou"></div>
+    <button id="button1">ボタン</button>
+    <img id="image2" />
+  </body>
+  <script type="text/javascript">
+    var a = "aaaaaaaa";
+    var b = "bbbbbbbbb";
+    document.getElementById("sou").innerHTML = a + b;
+    document.oncopy = function () {
+      window.location = "https://google.com";
+    };
+    document.getElementById("button1").onclick = function () {
+      document
+        .getElementById("image2")
+        .setAttribute(
+          "src",
+          "https://images-fe.ssl-images-amazon.com/images/I/71Klf-k87EL._AC_UL160_.jpg"
+        );
+    };
+  </script>
+</html>
+<!--
+
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/eaiW0MJQnqY"
+      frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+
+    -->

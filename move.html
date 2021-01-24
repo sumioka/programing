@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      #papa1 {
+        position: absolute;
+        top: 100;
+        left: 0;
+      }
+
+      #papa2 {
+        position: absolute;
+        top: 100;
+        left: 300;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ぶつかるー</h1>
+    <div><button id="button1">ボタン</button></div>
+    <img
+      id="papa1"
+      style="width: 100px;"
+      src="https://jssst2013.files.wordpress.com/2013/08/photo-sumioka.png"
+    />
+    <img
+      id="papa2"
+      style="width: 100px;"
+      src="https://jssst2013.files.wordpress.com/2013/08/photo-sumioka.png"
+    />
+  </body>
+  <script type="text/javascript">
+    var x1 = 0;
+    var v1 = 10;
+    document.getElementById("button1").onclick = function () {
+      moveAll();
+    };
+    function moveAll() {
+      if (x1 > 200) {
+        move_back();
+      } else {
+        move_front();
+      }
+    }
+    function move_front() {
+      x1 = x1 + v1;
+      v1 = v1 + 10;
+      document.getElementById("papa1").style.left = x1 + "px";
+      setTimeout(moveAll, 100);
+    }
+
+    function move_back() {
+      x1 = x1 - 30;
+      document.getElementById("papa1").style.left = x1 + "px";
+      setTimeout(function () {
+        document.getElementById("papa1").style.left = x1 + "px";
+        x1 = x1 - 60;
+        v1 = 0;
+        document.getElementById("papa1").style.left = x1 + "px";
+        setTimeout(moveAll, 200);
+      }, 100);
+    }
+  </script>
+</html>
+<!--
+
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/eaiW0MJQnqY"
+      frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+
+    -->
