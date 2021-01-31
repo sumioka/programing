@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script>
+            function toggle() {
+                let src = document.getElementById("image").src;
+                if(src.match(/box1.jpg/)){
+                    document.getElementById("image").src = "./box2.jpg";
+                } else {
+                    document.getElementById("image").src = "./box1.jpg";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div style="background-color: #eeeeee; height: 200px;">
+            <div style="font-size: 30px; padding: 20px;">総一郎くん</div>
+            <div style="font-size: 30px; margin: 0 20px;">お誕生日おめでとう！</div>
+        </div>
+        <div style="background-color: #fff;" style="display: flex;">
+            <img id="image" style="height: 300px; display:block; margin: 0 auto;" src="./box1.jpg" onclick="toggle()">
+        </div>
+        <div style="background-color: #eeeeee; height: 200px;">
+            
+        </div>
+    </body>
+</html>
